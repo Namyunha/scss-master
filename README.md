@@ -14,3 +14,12 @@ SCSS Layout Masterclass: Flex & Grid
 - [x] flex-grow
 - [x] flex-shrink
 - [x] flex-basis
+
+#Grid:
+
+- [x] grid-template-columns
+- [x] grid-template-rows
+- [x] column-gap
+- [x] row-gap
+- [x] gap
+- [x] grid-template-areas
