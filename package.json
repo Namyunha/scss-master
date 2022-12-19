@@ -1,0 +1,33 @@
+{
+  "name": "scss-master",
+  "version": "1.0.0",
+  "description": "SCSS Layout Masterclass: Flex & Grid",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Namyunha/scss-master.git"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Namyunha/scss-master/issues"
+  },
+  "homepage": "https://github.com/Namyunha/scss-master#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "del": "^7.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0"
+  },
+  "dependencies": {}
+}
