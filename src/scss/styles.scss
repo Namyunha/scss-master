@@ -1,18 +1,11 @@
-@import "_variables";
+@import "_buttons.scss";
 
-h2 {
-  color: $bg;
+a {
+  @extend %button;
+  text-decoration: none;
 }
 
-.box {
-  margin-top: 20px;
-  &:hover {
-    background-color: goldenrod;
-  }
-  h2 {
-    color: blue;
-  }
-  button {
-    color: red;
-  }
+button {
+  @extend %button;
+  border: none;
 }
