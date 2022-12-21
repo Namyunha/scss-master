@@ -1,11 +1,102 @@
-@import "_buttons.scss";
-
-a {
-  @extend %button;
-  text-decoration: none;
+@import "reset";
+@import "_variables";
+* {
+  box-sizing: border-box;
 }
-
-button {
-  @extend %button;
-  border: none;
+body {
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: 540;
+    width: $fixedWidth;
+    height: 100vh;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 77px;
+    h1 {
+      font-weight: 550;
+      text-transform: uppercase;
+      font-size: 80px;
+      margin-bottom: 150px;
+      color: $red;
+    }
+    p {
+      width: 80%;
+      font-size: 20px;
+      color: $red;
+      opacity: 0.7;
+      &:last-child {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .list {
+      width: 80%;
+      height: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      a {
+        color: rgba(0, 0, 0, 0.5);
+        margin-right: 10px;
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+  main {
+    margin-left: $fixedWidth;
+    height: 5000vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 1%,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      )
+      $red;
+    display: flex;
+    flex-direction: column;
+    .movie__navigator {
+      color: $white;
+      display: flex;
+      position: fixed;
+      width: 67%;
+      height: 150px;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      font-weight: 500;
+      background-color: rgba(230, 72, 62, 0.9);
+      border: 4px solid rgba(0, 0, 0, 0.1);
+    }
+    section {
+      width: 100%;
+      margin: 300px 0;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 900px;
+      }
+      .movie__title {
+        color: $white;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        span {
+          &:first-child {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
 }
