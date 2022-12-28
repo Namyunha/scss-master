@@ -1,89 +1,97 @@
 @import "reset";
 @import "_variables";
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: $bg;
-  height: 100vh;
+  height: 200vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  .grid {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1.5fr 1.9fr 1.5fr;
-    grid-template-rows: 1fr 5fr 1fr;
-    gap: 2px;
-    .grid__column {
-      display: grid;
-      grid-template-rows: repeat(7, 1fr);
-      height: 100vh;
-      gap: 2px;
-      .img {
-        cursor: pointer;
-        display: grid;
-        background-position: center;
-        grid-row-start: 2;
-        grid-row-end: 7;
-        background-image: url("https://images.unsplash.com/photo-1671973725944-91cf57ef69fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
-        background-size: cover;
+  .section-header {
+    z-index: 1;
+    position: fixed;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    font-size: 35px;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: white;
+    .header-item__left-pannel {
+      font-weight: 700;
+      width: 66.6%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      .header-item__left-pannel__left {
+        margin-right: 130px;
       }
-      span {
-        cursor: pointer;
-        font-weight: 500;
-        text-transform: uppercase;
-        color: $bg;
-        display: flex;
-        background-color: white;
-        font-size: 30px;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s linear;
-        &:hover {
-          color: white;
-          background-color: $bg;
-        }
-      }
-      .scrolling__text {
-        transition: none;
-        &:hover {
-          color: $bg;
-          background-color: white;
-        }
-        cursor: default;
-        overflow: hidden;
-        white-space: nowrap;
-        display: flex;
-        align-items: center;
-        background-color: white;
+      .header-item__left-pannel__right {
         span {
-          cursor: default;
-          animation: scrollText 8s linear infinite forwards;
-          transition: none;
-          &:hover {
-            color: $bg;
-            background-color: white;
+          color: rgba(0, 0, 0, 0.2);
+          margin-right: 60px;
+        }
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        .header-item__left-pannel__right {
+          span {
+            color: white;
           }
         }
       }
     }
+    .header-item__right-pannel {
+      font-weight: 700;
+      width: 33.4%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .header-item__right-pannel__left {
+        span {
+          margin-right: 80px;
+        }
+      }
+    }
   }
-  @keyframes scrollText {
-    0% {
-      transform: translateX(-150px);
-    }
-    50% {
-      transform: translateX(150px);
-    }
-    100% {
-      transform: translateX(-150px);
+  .section__project-grid {
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, 0.7fr);
+    .project-link {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      .media {
+        width: 100%;
+        height: 100%;
+        .projuect-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .project-title__gutters {
+        padding-left: 7px;
+      }
     }
   }
 }
