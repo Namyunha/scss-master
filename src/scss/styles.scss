@@ -1,6 +1,9 @@
 @import "reset";
 @import "_variables";
-
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -8,76 +11,248 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  display: grid;
-  grid-template-columns: 1.3fr 4fr;
-  padding: 25px;
-  align-items: start;
-  h1 {
-    cursor: pointer;
-    height: 40px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    &:hover {
-      span {
-        opacity: 1;
-      }
-    }
-    span {
-      opacity: 0.5;
-    }
-  }
 }
-main {
-  display: gird;
-  grid-template-columns: repeat(2 1fr);
-  row-gap: 80px;
-  column-gap: 20px;
-  .header__list {
-    cursor: pointer;
-    height: 40px;
-    font-size: 20px;
-    grid-column-start: span 2;
-    margin-bottom: 80px;
-    opacity: 0.5;
-    ul {
+.header {
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  .header__title {
+    letter-spacing: 10px;
+    font-family: "Anton", sans-serif;
+    font-size: 75px;
+    line-height: 60px;
+    margin-right: 15px;
+  }
+  .header__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .header__list {
+      height: 100%;
       display: flex;
-      margin-bottom: 80px;
-      li {
-        letter-spacing: 1px;
+      align-items: center;
+      span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 10px;
+        &:first-child {
+          background-color: teal;
+        }
+        &:nth-of-type(2) {
+          background-color: fuchsia;
+        }
+        &:nth-of-type(3) {
+          background-color: skyblue;
+        }
+        &:nth-of-type(4) {
+          background-color: slateblue;
+        }
+        &:nth-of-type(5) {
+          background-color: seagreen;
+        }
+        &:nth-of-type(6) {
+          background-color: sienna;
+        }
+        &:nth-of-type(7) {
+          background-color: salmon;
+        }
+        &:nth-of-type(8) {
+          background-color: crimson;
+        }
       }
-      li:not(:last-child) {
+      li {
+        letter-spacing: 2px;
+        font-size: 35px;
         margin-right: 15px;
       }
     }
   }
-  .content {
-    display: grid;
-    column-gap: 20px;
-    max-width: 100%;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 80px;
-    font-size: 20px;
-    line-height: 25px;
-    .content__img {
-      img {
-        max-width: 100%;
-        margin-bottom: 10px;
+}
+.posts {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80vh;
+  height: 400vh;
+  .post {
+    padding: 30px 20px 10px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .post__header {
+      font-family: "Moon Dance", cursive;
+      font-weight: 600;
+      width: 100%;
+      font-size: 25px;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+    }
+    .post__footer {
+      font-family: "Moon Dance", cursive;
+      font-weight: 600;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+    }
+    &:nth-of-type(1) {
+      background-color: skyblue;
+      .wrapper {
+        width: 50%;
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
+        .post__picture {
+          display: block;
+          width: 100%;
+          height: 90%;
+          background-image: url("https://images.unsplash.com/photo-1672659878782-5862ce1d70d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=409&q=80");
+          background-size: cover;
+          margin-bottom: 20px;
+        }
+        .post__content {
+          width: 140%;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+        }
       }
-      h4 {
-        opacity: 0.5;
+      .invisible {
+        display: none;
       }
     }
-    .content__text {
-      h2 {
-        font-weight: 600;
+    /**catagoty one**/
+    &:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: teal;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 70%;
+        .post__picture {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          .post__header {
+            font-family: "Rubik Gemstones", cursive;
+            position: absolute;
+            color: skyblue;
+            width: 120%;
+            font-size: 70px;
+            top: -30px;
+          }
+          width: 100%;
+          height: 100%;
+          background-image: url("https://images.unsplash.com/photo-1672659382440-5a030f208eca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+          background-size: cover;
+          background-position: center;
+        }
       }
-      p {
-        opacity: 0.5;
-        a {
-          text-decoration: none;
-          color: black;
+      .invisible {
+        display: none;
+      }
+    }
+    &:nth-of-type(4) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: teal;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 70%;
+        .post__picture {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          .post__header {
+            font-family: "Rubik Gemstones", cursive;
+            position: absolute;
+            color: salmon;
+            width: 120%;
+            font-size: 70px;
+            top: -30px;
+          }
+          width: 100%;
+          height: 100%;
+          background-image: url("https://images.unsplash.com/photo-1672661164570-d5e7e0890a69?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+          background-size: cover;
+          background-position: center;
+        }
+      }
+      .invisible {
+        display: none;
+      }
+    }
+    /**catagory two**/
+    &:hover {
+      .visible {
+        display: none;
+      }
+      .invisible {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .post__content {
+          width: 70%;
+          font-size: 20px;
+          line-height: 30px;
+          display: flex;
+          text-align: center;
+          opacity: 0.7;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      background-image: url("https://images.unsplash.com/photo-1622236297949-eb7f7aa3a3cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+      background-size: cover;
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        .post__picture {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .invisible {
+        display: none;
+      }
+      &:hover {
+        background-image: none;
+        background-color: antiquewhite;
+        .invisible {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
         }
       }
     }
   }
+}
+.footer {
 }
