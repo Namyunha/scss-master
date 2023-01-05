@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -31,6 +32,9 @@ body {
     font-size: 75px;
     line-height: 60px;
     margin-right: 15px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .header__nav {
     height: 100%;
@@ -40,6 +44,7 @@ body {
       height: 100%;
       display: flex;
       align-items: center;
+
       span {
         width: 20px;
         height: 20px;
@@ -58,7 +63,7 @@ body {
           background-color: slateblue;
         }
         &:nth-of-type(5) {
-          background-color: seagreen;
+          background-color: darkseagreen;
         }
         &:nth-of-type(6) {
           background-color: sienna;
@@ -71,9 +76,13 @@ body {
         }
       }
       li {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-size: 35px;
         margin-right: 15px;
+        &:hover {
+          cursor: pointer;
+          font-family: "Rubik Gemstones", cursive;
+        }
       }
     }
   }
@@ -83,7 +92,6 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 80vh;
-  height: 400vh;
   .post {
     cursor: pointer;
     padding: 30px 20px 10px 20px;
@@ -139,7 +147,7 @@ body {
       }
     }
     &:nth-of-type(5) {
-      background-color: seagreen;
+      background-color: darkseagreen;
       .wrapper {
         width: 60%;
         height: 60%;
@@ -313,6 +321,46 @@ body {
         display: none;
       }
     }
+    &:nth-of-type(10) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: teal;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 70%;
+        .post__picture {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          .post__header {
+            font-family: "Rubik Gemstones", cursive;
+            position: absolute;
+            color: fuchsia;
+            width: 120%;
+            font-size: 70px;
+            top: -30px;
+          }
+          width: 100%;
+          height: 100%;
+          background-image: url("https://images.unsplash.com/photo-1505444226624-239b421655ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+          background-size: cover;
+          background-position: center;
+        }
+      }
+      .invisible {
+        display: none;
+      }
+      &:hover {
+        background-image: url("https://images.unsplash.com/photo-1479292889369-1a48f234247e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=474&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+    }
     /**catagory two**/
     &:nth-of-type(6) {
       cursor: auto;
@@ -376,7 +424,7 @@ body {
               color: slateblue;
             }
             &:nth-of-type(5) {
-              color: seagreen;
+              color: darkseagreen;
             }
             &:nth-of-type(6) {
               color: sienna;
@@ -461,8 +509,116 @@ body {
         }
       }
     }
+    &:nth-of-type(11) {
+      background-image: url("https://images.unsplash.com/photo-1671190363842-491e137b7aa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+      background-size: cover;
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        .post__picture {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .invisible {
+        display: none;
+      }
+      &:hover {
+        background-image: none;
+        background-color: antiquewhite;
+        .invisible {
+          font-family: "Sevillana", cursive;
+          display: flex;
+          width: 80%;
+          height: 100%;
+          align-items: center;
+          .post__content {
+            width: 100%;
+            height: 100%;
+            font-size: 45px;
+            line-height: 55px;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
     /**category four**/
+    &:nth-of-type(12) {
+      background-color: teal;
+      .post__header {
+        font-size: 20px;
+        font-family: "Sevillana", cursive;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .post__content {
+          width: 60%;
+          text-align: center;
+          font-size: 45px;
+          font-family: "Rubik Gemstones", cursive;
+        }
+      }
+      .invisible {
+        display: none;
+      }
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: teal;
+      }
+    }
   }
 }
 .footer {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: aliceblue;
+  .footer__button {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      background-color: deepskyblue;
+      border: none;
+      font-size: 40px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 10px 10px 50px 10px deepskyblue;
+      }
+    }
+  }
+  .footer__foot {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .footer__foot__side {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      a {
+        font-family: "Moon Dance", cursive;
+        font-weight: 600;
+        font-size: 30px;
+        color: black;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
